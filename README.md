@@ -23,3 +23,13 @@ After running `main.py` to perform search, open a new terminal and run the `sear
 
 For running the test cases, Run the `tfidf_test.py` using the `python tfidf_test.py` command
 
+For uploading multiple files use the `upload_dir.py`, a input path is to be passed as commandline argument
+
+### Format
+```
+python upload_dir.py --input_dir INPUT PATH
+```
+### Example
+```
+python upload_dir.py --input_dir F:\Datasets\aclImdb_v1\aclImdb\test\neg\
+```
