@@ -8,6 +8,7 @@
 <td> main.py </td>
 <td> start point for both tfidf and uploading APIs </td>
 </tr>
+</table>
 
 main.py  - start point for both tfidf and uploading APIs <br>
 search.py - Ranks the documents according to their tf-idf score with respect to the search query <br>
