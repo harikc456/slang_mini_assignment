@@ -41,6 +41,14 @@
 </tr>
 </table>
 
+## FastAPI Installation
+
+Install fastapi for running the API
+
+```
+pip install fastapi
+```
+
 ## TF-IDF Implementation
 
 The formulas used for the native implementation of tf-idf
