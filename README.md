@@ -45,9 +45,9 @@
 
 The formulas used for the native implementation of tf-idf
 
-<img src="img\term_frequency.png">
+<img src="img\term_frequency.PNG">
 
-<img src="img\idf.png">
+<img src="img\idf.PNG">
 
 ## How to run the scripts
  
