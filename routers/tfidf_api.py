@@ -18,7 +18,9 @@ async def tfidf_search(input_query: str):
 	if docs != new_docs:
 		print("New files detected, Updating TF-IDF.....")
 		tfidf = Tfidf(new_docs)
+		docs = new_docs.copy()
 	rankings = tfidf.rank_docs(input_query)
+	print(rankings)
 	if isinstance(rankings[0], dict):
 		return {'rankings' : rankings}
 	return {"OOV" : rankings}

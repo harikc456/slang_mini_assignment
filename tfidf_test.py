@@ -10,7 +10,7 @@ class TestingClass(unittest.TestCase):
         super(TestingClass, self).__init__(*args, **kwargs)
         upload_dir = os.getcwd()+"/test_uploads/"
         docs = os.listdir(upload_dir)
-        self.tfidf = Tfidf(docs)
+        self.tfidf = Tfidf(docs, upload_dir = "./test_uploads/")
 
     def test_tfidf1(self):
         query = "poor bad"

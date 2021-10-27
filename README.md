@@ -53,6 +53,10 @@ t is the term, d is the document
 
 N is the number of documents, n_t is the number of documents where term t appears in the corpus to avoid division by zero, n_t is set as 1 by default
 
+```
+tf-idf = tf * idf
+```
+
 ## How to run the scripts
  
 To start the API, use the following 

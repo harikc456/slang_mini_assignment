@@ -1,11 +1,9 @@
 import numpy as np
 import math
 
-upload_dir = "./uploads/"
-
 class Tfidf():
     
-    def __init__(self, docs):
+    def __init__(self, docs, upload_dir = "./uploads/"):
         self.corpus_index = {i:doc for i,doc in enumerate(docs)}
 
         self.corpus = []
@@ -63,7 +61,7 @@ class Tfidf():
                 continue
             idx = self.vocab_index[query.lower()]
             tfidf_scores += self.tfidf_matrix[:,idx]
-        if sum(tfidf_scores) == 0:
+        if (tfidf_scores == np.zeros(len(self.corpus))).all():
             return out_of_vocab_words
         ranked_idx = np.argsort(tfidf_scores)[::-1]
         for idx in ranked_idx:
@@ -72,5 +70,4 @@ class Tfidf():
             temp_dict['document_name'] = self.corpus_index[idx]
             temp_dict['tfidf_score'] = float(tfidf_scores[idx])
             return_dict.append(temp_dict)
-            #print(f"Document_id  : #{idx}  Document_name : {self.corpus_index[idx]} tfidf_score : {tfidf_scores[idx]}")
         return return_dict
