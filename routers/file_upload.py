@@ -17,6 +17,5 @@ async def create_upload_files(files: List[UploadFile] = File(...)):
 
         with open(file_name,'wb+') as f:
             f.write(file.file.read())
-            f.close()
 
     return {"filenames": [file.filename for file in files]}

@@ -13,7 +13,9 @@ doc_list = os.listdir(input_dir)
 
 files = []
 for doc in doc_list:
-    f = ("files", (doc, open(input_dir + doc, "r"), "multipart/form-data"))
+    fp = open(input_dir + doc, "r")
+    f = ("files", (doc, fp, "multipart/form-data"))
+    fp.close()
     files.append(f)
 r = requests.post('http://127.0.0.1:8080/uploadfiles/', files=files)
 print(json.loads(r.content))

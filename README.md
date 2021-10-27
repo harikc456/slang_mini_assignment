@@ -1,4 +1,4 @@
-# slang_mini_assignment
+# Slang Mini Assignment
  Mini Assignment from Slang Labs
 
 ## Files
@@ -26,20 +26,25 @@
 
 
 <tr>
-<td> routers/file_upload.py </td>
+<td> routers\file_upload.py </td>
 <td> API for uploading multiple files </td>
 </tr>
 
 <tr>
-<td> routers/tfidf.py </td>
+<td> routers\tfidf.py </td>
 <td> Native Implementation of tf-idf </td>
 </tr>
 
 <tr>
-<td> routers/tfidf_api.py </td>
+<td> routers\tfidf_api.py </td>
 <td> API for ranking documents with respect to the search query</td>
 </tr>
 </table>
+
+## TF-IDF Implementation
+
+The formulas used for the native implementation of tf-idf
+
 
 ## How to run the scripts
  
@@ -57,7 +62,7 @@ After running `main.py` to perform search, open a new terminal and run the `sear
 
 For running the test cases, Run the `tfidf_test.py` using the `python tfidf_test.py` command
 
-For uploading multiple files use the `upload_dir.py`, a input path is to be passed as commandline argument
+For uploading multiple files use the `upload_dir.py`, a input path is to be passed as a commandline argument
 
 ### Format
 ```
@@ -67,3 +72,4 @@ python upload_dir.py --input_dir INPUT PATH
 ```
 python upload_dir.py --input_dir F:\Datasets\aclImdb_v1\aclImdb\test\neg\
 ```
+ <strong> Only files with .txt files will be uploaded </strong>
