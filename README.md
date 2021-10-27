@@ -4,12 +4,12 @@
 ## Files
 
 main.py  - start point for both tfidf and uploading APIs <br>
-search.py - Ranks the documents according to their tf-idf score with respect to the search query <br>  
+search.py - Ranks the documents according to their tf-idf score with respect to the search query 
 upload_dir.py - takes directory path as input and uploads all the files in the directory <br>
 tfidf_test.py - unitest cases for checking Tfidf search <br>
  
  
-TO start the API, use the following 
+To start the API, use the following 
 
 ```
 python main.py
