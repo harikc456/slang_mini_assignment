@@ -48,7 +48,7 @@ The formulas used for the native implementation of tf-idf
 <img src="img\term_frequency.PNG">
 
 t is the term, d is the document
-
+	
 <img src="img\idf.PNG">
 
 N is the number of documents, n_t is the number of documents where term t appears in the corpus to avoid division by zero, n_t is set as 1 by default
@@ -77,6 +77,14 @@ python upload_dir.py --input_dir INPUT PATH
 ```
 ### Example
 ```
-python upload_dir.py --input_dir F:\Datasets\aclImdb_v1\aclImdb\test\neg\
+python upload_dir.py --input_dir C:\Users\HARIKRISHNAN\Documents\GitHub\slang_mini_assignment\test_uploads\
 ```
- <strong> Only files with .txt files will be uploaded </strong>
+
+## Notes
+<strong>
+ Only files with .txt files will be uploaded  <br>
+ 
+ When using `search.py` is called after a `upload_dir.py` execution, there will be a time lag as the tfidf scores has to be recomputed.<br>
+ 
+ A hard limit of 500 files per upload has been set
+ </strong>

@@ -12,6 +12,7 @@ tfidf = Tfidf(docs)
 @router.get("/tfidf/{input_query}")
 async def tfidf_search(input_query: str):
 
+	global tfidf, docs
 	upload_dir = os.getcwd()+"/uploads/"
 	new_docs = os.listdir(upload_dir)
 	if docs != new_docs:
