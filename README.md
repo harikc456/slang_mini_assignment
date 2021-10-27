@@ -3,6 +3,12 @@
 
 ## Files
 
+<table>
+<tr>
+<td> main.py </td>
+<td> start point for both tfidf and uploading APIs </td>
+</tr>
+
 main.py  - start point for both tfidf and uploading APIs <br>
 search.py - Ranks the documents according to their tf-idf score with respect to the search query <br>
 upload_dir.py - takes directory path as input and uploads all the files in the directory <br>
