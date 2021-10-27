@@ -13,7 +13,7 @@ class Tfidf():
             f = open(upload_dir + doc)
             self.corpus.append(f.read())
             f.close()
-            
+
         self.vocab_index = {}
         self.idf_dict = {}
         words = self.create_vocab_index()
@@ -56,8 +56,12 @@ class Tfidf():
     def rank_docs(self, input_query):
         return_dict = []
         tfidf_scores = np.zeros(len(self.corpus))
+        out_of_vocab_words = []
         for query in input_query.split():
-            idx = self.vocab_index[query]
+            if query.lower() not in list(self.vocab_index.keys()):
+                raise KeyError
+                continue
+            idx = self.vocab_index[query.lower()]
             tfidf_scores += self.tfidf_matrix[:,idx]
         ranked_idx = np.argsort(tfidf_scores)[::-1]
         for idx in ranked_idx:
