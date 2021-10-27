@@ -81,7 +81,10 @@ python upload_dir.py --input_dir C:\Users\HARIKRISHNAN\Documents\GitHub\slang_mi
 ```
 
 ## Notes about uploads
+<ul>
+<li>  Only files with .txt files will be uploaded. </li>
+<li>  A hard limit of 500 files per upload has been set. </li>
+<li> When using `search.py` after a `upload_dir.py` execution, there will be a time lag as the tfidf scores has to be recomputed. </li>
+</ul>
 
- Only files with .txt files will be uploaded  <br>
- When using `search.py` after a `upload_dir.py` execution, there will be a time lag as the tfidf scores has to be recomputed.<br> 
- A hard limit of 500 files per upload has been set
+
