@@ -35,7 +35,7 @@ class Tfidf():
         for word in words:
             count = 1
             for doc in self.corpus:
-                if word in doc.lower():
+                if word in doc.lower().split():
                     count+=1
             self.idf_dict[word] = math.log(len(self.corpus)/ count)
             
@@ -59,10 +59,12 @@ class Tfidf():
         out_of_vocab_words = []
         for query in input_query.split():
             if query.lower() not in list(self.vocab_index.keys()):
-                raise KeyError
+                out_of_vocab_words.append(query)
                 continue
             idx = self.vocab_index[query.lower()]
             tfidf_scores += self.tfidf_matrix[:,idx]
+        if sum(tfidf_scores) == 0:
+            return out_of_vocab_words
         ranked_idx = np.argsort(tfidf_scores)[::-1]
         for idx in ranked_idx:
             temp_dict = {}

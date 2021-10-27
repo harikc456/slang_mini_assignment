@@ -47,7 +47,11 @@ The formulas used for the native implementation of tf-idf
 
 <img src="img\term_frequency.PNG">
 
+t is the term, d is the document
+
 <img src="img\idf.PNG">
+
+N is the number of documents, n_t is the number of documents where term t appears in the corpus to avoid division by zero, n_t is set as 1 by default
 
 ## How to run the scripts
  

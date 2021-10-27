@@ -1,4 +1,5 @@
 import os
+import json
 import unittest
 from routers.tfidf import Tfidf
 
@@ -23,7 +24,8 @@ class TestingClass(unittest.TestCase):
 
     def test_tfidf3(self):
         query = "taste"
-        self.assertRaises(KeyError, self.tfidf.rank_docs, query)
+        res = self.tfidf.rank_docs(query)
+        self.assertEqual(res[0], "taste")
 
 if __name__ == '__main__':
     unittest.main()
