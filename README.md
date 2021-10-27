@@ -80,11 +80,8 @@ python upload_dir.py --input_dir INPUT PATH
 python upload_dir.py --input_dir C:\Users\HARIKRISHNAN\Documents\GitHub\slang_mini_assignment\test_uploads\
 ```
 
-## Notes
-<strong>
+## Notes about uploads
+
  Only files with .txt files will be uploaded  <br>
- 
- When using `search.py` is called after a `upload_dir.py` execution, there will be a time lag as the tfidf scores has to be recomputed.<br>
- 
+ When using `search.py` is called after a `upload_dir.py` execution, there will be a time lag as the tfidf scores has to be recomputed.<br> 
  A hard limit of 500 files per upload has been set
- </strong>
