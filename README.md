@@ -8,13 +8,29 @@
 <td> main.py </td>
 <td> start point for both tfidf and uploading APIs </td>
 </tr>
+
+<tr>
+<td> search.py </td>
+<td> Ranks the documents according to their tf-idf score with respect to the search query </td>
+</tr>
+
+<tr>
+<td> upload_dir.py </td>
+<td> takes directory path as input and uploads all the files in the directory  </td>
+</tr>
+
+<tr>
+<td> tfidf_test.py </td>
+<td> unitest cases for checking Tfidf search </td>
+</tr>
+
+
+<tr>
+<td> main.py </td>
+<td> start point for both tfidf and uploading APIs </td>
+</tr>
 </table>
 
-main.py  - start point for both tfidf and uploading APIs <br>
-search.py - Ranks the documents according to their tf-idf score with respect to the search query <br>
-upload_dir.py - takes directory path as input and uploads all the files in the directory <br>
-tfidf_test.py - unitest cases for checking Tfidf search <br>
- 
  
 To start the API, use the following 
 
