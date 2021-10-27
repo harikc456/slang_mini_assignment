@@ -26,8 +26,18 @@
 
 
 <tr>
-<td> main.py </td>
-<td> start point for both tfidf and uploading APIs </td>
+<td> routers/file_upload.py </td>
+<td> API for uploading multiple files </td>
+</tr>
+
+<tr>
+<td> routers/tfidf.py </td>
+<td> Native Implementation of tf-idf </td>
+</tr>
+
+<tr>
+<td> routers/tfidf_api.py </td>
+<td> API for ranking documents with respect to the search query</td>
 </tr>
 </table>
 
