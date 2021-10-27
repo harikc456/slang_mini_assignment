@@ -7,7 +7,7 @@ class TestingClass(unittest.TestCase):
     def __init__(self, *args, **kwargs):
 
         super(TestingClass, self).__init__(*args, **kwargs)
-        upload_dir = os.getcwd()+"/uploads/"
+        upload_dir = os.getcwd()+"/test_uploads/"
         docs = os.listdir(upload_dir)
         self.tfidf = Tfidf(docs)
 
@@ -24,7 +24,6 @@ class TestingClass(unittest.TestCase):
     def test_tfidf3(self):
         query = "taste"
         self.assertRaises(KeyError, self.tfidf.rank_docs, query)
-
 
 if __name__ == '__main__':
     unittest.main()
