@@ -31,6 +31,7 @@
 </tr>
 </table>
 
+## How to run the scripts
  
 To start the API, use the following 
 
